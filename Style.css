@@ -1,0 +1,353 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #FFF; /* teks putih */
+    padding-top: 80px; /* Adjust padding-top to match nav height */
+    background-color: #1C1C1C; /* background gelap */
+}
+
+/* Container dengan margin kiri kanan 120px dan max lebar */
+.container {
+    max-width: 1440px; /* Maintain max-width */
+    margin: 0 auto; /* Center the container */
+    padding: 0 120px; /* Consistent padding for all content */
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #222; /* gelap */
+    padding: 0 120px; /* Consistent padding for nav */
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    line-height: 80px;
+    padding: 0 8px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* JUDUL SECTION */
+h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+/* ABOUT SECTION */
+.about {
+    padding-top: 80px; /* Adjusted padding-top for sections */
+    padding-bottom: 80px; /* Add some padding at the bottom for spacing */
+    color: #fff;
+}
+
+.about-content { /* New wrapper to control flex behavior for image and text */
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Bagian text di About: rata kiri */
+.about .text {
+    flex: 1;
+    text-align: left;
+}
+
+/* judul dan paragraf About */
+.about .text h1 {
+    font-size: 48px;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.about .text h3 {
+    font-size: 28px;
+    color: #fff;
+}
+
+.about .text h4 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+hr.garis {
+    width: 80px;
+    height: 3px;
+    background-color: #ccc;
+    border: none;
+    margin: 15px 0 30px 0;
+}
+
+/* Paragraf About */
+.about p {
+    font-size: 18px;
+    color: #ddd;
+    max-width: 700px; /* Keep max-width for readability */
+    line-height: 1.6;
+    margin-bottom: 40px; /* Space before buttons */
+}
+
+/* Tombol dan ikon About diletakkan **di bawah** teks, now within .text */
+.about .button-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Tombol Download CV di About */
+.btn-download {
+    padding: 12px 30px;
+    background-color: #fff; /* putih */
+    color: #000; /* tulisan hitam */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 40px; /* corner radius besar */
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-download:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+/* Tombol icon sosmed About */
+.icon-btn {
+    width: 42px;
+    height: 42px;
+    background-color: #fff; /* putih */
+    border-radius: 40px; /* bulat besar */
+    overflow: hidden;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    padding: 6px; /* buat agak ada ruang dalam */
+}
+
+.icon-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.icon-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Bagian gambar About: flex 1 supaya 50% */
+.about .image {
+    flex: 1;
+}
+
+.about .image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Mentorship Section */
+.mentorship {
+    padding: 80px 0; /* Add padding for spacing */
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+    margin-bottom: 80px;
+}
+
+.portfolio-item {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px; /* Fixed width for each item */
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    transition: box-shadow 0.3s ease;
+    color: #fff;
+    display: flex; /* Use flexbox to align content within the item */
+    flex-direction: column; /* Stack image and button vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.9);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 150px; /* Consistent height for mentorship images */
+    border-radius: 12px;
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    margin-bottom: 20px; /* Space between image and button */
+}
+
+.btn-link {
+    padding: 12px 30px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 40px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Make button width match parent (image width) */
+}
+
+.btn-link:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+/* Project Section */
+.project {
+    padding: 80px 0; /* Add padding for spacing */
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.project-item {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px; /* Fixed width for each item */
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    transition: box-shadow 0.3s ease;
+    color: #fff;
+    display: flex; /* Use flexbox to align content within the item */
+    flex-direction: column; /* Stack image and button vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.project-item:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.9);
+}
+
+.project-item img {
+    width: 100%;
+    height: 620px; /* Twice the height of mentorship images */
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 20px; /* Space between image and button */
+}
+
+/* CONTACT SECTION */
+.contact {
+    max-width: 600px;
+    margin: 0 auto 100px auto;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 80px; /* Add padding for spacing */
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: #bbb;
+}
+
+.btn-submit {
+    background-color: #FF9EC1; /* Specific color requested */
+    color: #000; /* Black font color */
+    border: none;
+    border-radius: 40px; /* Corner radius */
+    padding: 12px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #e08bb0; /* Slightly darker shade for hover */
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        padding: 0 30px; /* Reduce padding on smaller screens */
+    }
+    nav {
+        padding: 0 30px; /* Reduce nav padding */
+    }
+    .about-content { /* Adjust flex direction for smaller screens */
+        flex-direction: column;
+    }
+    .about .button-group {
+        justify-content: center;
+    }
+    .portfolio-container,
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .portfolio-item,
+    .project-item {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}
